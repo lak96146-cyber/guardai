@@ -1,4 +1,4 @@
-﻿
+
 import cv2
 import threading
 import time
@@ -92,7 +92,7 @@ def open_camera():
         return True
 
     for index in (0, 1, 2):
-        cap = cv2.VideoCapture(1, cv2.CAP_DSHOW)
+        cap = cv2.VideoCapture(index, cv2.CAP_DSHOW)
 
         if cap.isOpened():
             camera = cap
@@ -456,3 +456,4 @@ def hardware_disconnect():
 
 
 app.include_router(exam_router)
+
